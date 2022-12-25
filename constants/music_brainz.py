@@ -1,0 +1,2 @@
+GET_MUSICBRAINZ_COVER_IMAGES = True
+COVER_RELEASE_ID_FILE_PREFIX_MB = "musicbrainz-cover-releaseid-"
