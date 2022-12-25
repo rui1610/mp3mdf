@@ -2,8 +2,8 @@ name: Build docker image mp3mdf
 
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
