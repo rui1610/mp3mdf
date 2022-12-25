@@ -9,7 +9,7 @@
 # export MP3MDF_INPUT_FOLDER
 # export MP3MDF_OUTPUT_FOLDER
 # export GENIUS_ACCESS_TOKEN
-source setenv.sh
+# source setenv.sh
 
 NOCOLOR='\033[0m'
 GREEN='\033[0;32m'

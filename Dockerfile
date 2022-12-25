@@ -22,7 +22,7 @@ RUN adduser \
     && pip install --no-cache-dir -r /tmp/pip-tmp/requirements.txt \
     && rm -rf /tmp/pip-tmp \
     ## Set the right timezone in the container image
-    && cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime 
+    && cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 USER $USERNAME
 WORKDIR $HOME_FOLDER
