@@ -25,7 +25,7 @@ jobs:
       - name: Push image mp3mdf
         run: |
           IMAGE_NAME=mp3mdf
-          IMAGE_ID=ghcr.io/${{ github.repository }}/$IMAGE_NAME
+          IMAGE_ID=ghcr.io/${{ github.repository }}
 
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
