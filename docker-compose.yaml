@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  mp3mdf:
+    #image: ghcr.io/rui1610/mp3mdf:main
+    build: 
+      context: .
+      dockerfile: dockerfiles/Dockerfile_mp3mdf
+    container_name: mp3mdf
+    restart: "no"
+    hostname: mp3mdf
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ="Europe/Berlin"
+    volumes:
+      - "${MP3MDF_INPUT_FOLDER}:/data/input"
+      - "${MP3MDF_OUTPUT_FOLDER}:/data/output"
