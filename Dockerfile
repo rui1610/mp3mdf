@@ -28,4 +28,3 @@ USER $USERNAME
 WORKDIR $HOME_FOLDER
 
 CMD ["bash"]
-ENTRYPOINT [ "/mp3mdf/mp3mdf" ]
