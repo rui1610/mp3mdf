@@ -7,6 +7,8 @@ from util.metadata import hasArtist, hasLyrics, hasTitle
 
 GENIUS_ACCESS_TOKEN = os.getenv('GENIUS_ACCESS_TOKEN')
 
+print("GENIUS_ACCESS_TOKEN = >" + GENIUS_ACCESS_TOKEN + "<")
+
 # if GENIUS_ACCESS_TOKEN and len(GENIUS_ACCESS_TOKEN) > 0:
 
 genius = Genius(GENIUS_ACCESS_TOKEN)
