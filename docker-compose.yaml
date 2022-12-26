@@ -17,5 +17,5 @@ services:
       - MP3MDF_OUTPUT_FOLDER=${MP3MDF_OUTPUT_FOLDER}
       - TZ="Europe/Berlin"
     volumes:
-      - "${MP3MDF_INPUT_FOLDER}:/data/input"
-      - "${MP3MDF_OUTPUT_FOLDER}:/data/output"
+      - "${MP3MDF_INPUT_FOLDER}:/mp3mdf/data/input"
+      - "${MP3MDF_OUTPUT_FOLDER}:/mp3mdf/data/output"
