@@ -12,6 +12,9 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
+      - GENIUS_ACCESS_TOKEN=${GENIUS_ACCESS_TOKEN}
+      - MP3MDF_INPUT_FOLDER=${MP3MDF_INPUT_FOLDER}
+      - MP3MDF_OUTPUT_FOLDER=${MP3MDF_OUTPUT_FOLDER}
       - TZ="Europe/Berlin"
     volumes:
       - "${MP3MDF_INPUT_FOLDER}:/data/input"
