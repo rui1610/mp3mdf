@@ -14,6 +14,7 @@ def getAllMp3Files(folder, pattern: str = "*.mp3"):
     for path, subdirs, files in os.walk(folder):
         for name in files:
             if fnmatch(name, pattern):
+                print(" - found mp3 file: " + os.path.join(path, name))
                 result.append(Path(os.path.join(path, name)))
 
     return result
