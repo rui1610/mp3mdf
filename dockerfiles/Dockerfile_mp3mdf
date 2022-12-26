@@ -27,4 +27,5 @@ RUN adduser \
 USER $USERNAME
 WORKDIR $HOME_FOLDER
 
-CMD ["bash"]
+# CMD ["bash"]
+ENTRYPOINT [ "./mp3mdf" ]
