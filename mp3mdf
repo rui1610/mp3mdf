@@ -12,7 +12,7 @@ print("GENIUS_ACCESS_TOKEN = >" + os.getenv('GENIUS_ACCESS_TOKEN') + "<")
 print("MP3MDF_INPUT_FOLDER = >" + os.getenv('MP3MDF_INPUT_FOLDER') + "<")
 print("MP3MDF_OUTPUT_FOLDER = >" + os.getenv('MP3MDF_OUTPUT_FOLDER') + "<")
 print("PGID = >" + os.getenv('PGID') + "<")
-print("GUID = >" + os.getenv('GUID') + "<")
+print("PUID = >" + os.getenv('PUID') + "<")
 
 allMp3Files = getAllMp3Files(FOLDER_INPUT)
 
