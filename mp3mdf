@@ -1,18 +1,21 @@
 #! /usr/bin/env python
 
 from util.files import getAllMp3Files, moveFile
-from constants.folders import FOLDER_INPUT
+from constants.folders import FOLDER_INPUT, FOLDER_OUTPUT, FOLDER_MAIN
 from pathlib import Path
 from model.song import Song
 import os
 
 temp = Path(__file__).resolve()
 
-print("GENIUS_ACCESS_TOKEN = >" + os.getenv('GENIUS_ACCESS_TOKEN') + "<")
-print("MP3MDF_INPUT_FOLDER = >" + os.getenv('MP3MDF_INPUT_FOLDER') + "<")
+print("GENIUS_ACCESS_TOKEN  = >" + os.getenv('GENIUS_ACCESS_TOKEN') + "<")
+print("MP3MDF_INPUT_FOLDER  = >" + os.getenv('MP3MDF_INPUT_FOLDER') + "<")
 print("MP3MDF_OUTPUT_FOLDER = >" + os.getenv('MP3MDF_OUTPUT_FOLDER') + "<")
 print("PGID = >" + os.getenv('PGID') + "<")
 print("PUID = >" + os.getenv('PUID') + "<")
+print("FOLDER_INPUT  = >" + FOLDER_INPUT + "<")
+print("FOLDER_OUTPUT = >" + FOLDER_OUTPUT + "<")
+print("FOLDER_MAIN   = >" + FOLDER_MAIN + "<")
 
 allMp3Files = getAllMp3Files(FOLDER_INPUT)
 
