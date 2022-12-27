@@ -22,7 +22,7 @@ docker container rm  -f "${CONTAINER_NAME}"
 docker image     rm  -f "${CONTAINER_NAME}"
 
 echo -e "${GREEN}Building container image for >${CONTAINER_NAME}< ${NOCOLOR}"
-docker image build -t ${CONTAINER_NAME}:latest -f "Dockerfile"  .
+docker image build -t ${CONTAINER_NAME}:latest -f "dockerfiles/Dockerfile_mp3mdf"  .
 
 echo -e "${GREEN}Starting container >${CONTAINER_NAME}< ${NOCOLOR}"
 
