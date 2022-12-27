@@ -19,6 +19,3 @@ RUN apk update \
     && cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 WORKDIR $HOME_FOLDER
-
-CMD ["bash"]
-# ENTRYPOINT [ "/mp3mdf/mp3mdf" ]

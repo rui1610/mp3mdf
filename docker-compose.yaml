@@ -9,6 +9,7 @@ services:
     container_name: mp3mdf
     restart: "no"
     hostname: mp3mdf
+    entrypoint: "/mp3mdf/mp3mdf"
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
