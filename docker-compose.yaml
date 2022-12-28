@@ -6,7 +6,7 @@ services:
     build: 
       context: .
       dockerfile: dockerfiles/Dockerfile_mp3mdf
-    container_name: mp3mdf
+    container_name: audio_mp3mdf
     restart: "no"
     hostname: mp3mdf
     entrypoint: "/mp3mdf/mp3mdf"
@@ -21,8 +21,9 @@ services:
       - "${MP3MDF_INPUT_FOLDER}:/mp3mdf/data/input"
       - "${MP3MDF_OUTPUT_FOLDER}:/mp3mdf/data/output"
 
-  ytdl_material:
+  youtubedl:
     image: tzahi12345/youtubedl-material:latest
+    container_name: audio_youtubedl
     restart: always
     hostname: youtubedl
     environment:
