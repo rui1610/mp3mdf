@@ -21,5 +21,20 @@ services:
       - "${MP3MDF_INPUT_FOLDER}:/mp3mdf/data/input"
       - "${MP3MDF_OUTPUT_FOLDER}:/mp3mdf/data/output"
 
+  ytdl_material:
+    image: tzahi12345/youtubedl-material:latest
+    restart: always
+    hostname: youtubedl
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ="Europe/Berlin"
+      - ALLOW_CONFIG_MUTATIONS=true
+    volumes:
+      - "${MP3MDF_INPUT_FOLDER}:/app/audio"
+      - "${FOLDER_MULTIMEDIA}/youtube-dl/video:/app/video"
+    ports: 
+      - "${PORT_YOUTUBEDL}:17442"
+
 networks:
   multimediaaudio:
