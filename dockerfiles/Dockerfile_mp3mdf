@@ -1,4 +1,4 @@
-FROM python:3.10.9-alpine3.16 AS final_build
+FROM python:3.10.9-alpine3.16 AS mp3mdf
 
 ENV APPNAME=mp3mdf
 
