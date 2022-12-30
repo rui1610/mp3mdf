@@ -32,10 +32,29 @@ services:
       - TZ="Europe/Berlin"
       - ALLOW_CONFIG_MUTATIONS=true
     volumes:
+      - "${DOCKER_DATA}/youtubedl:/config"
       - "${MP3MDF_INPUT_FOLDER}:/app/audio"
       - "${FOLDER_MULTIMEDIA}/youtube-dl/video:/app/video"
     ports: 
       - "${PORT_YOUTUBEDL}:17442"
+
+  syncthing:
+    image: lscr.io/linuxserver/syncthing:latest
+    container_name: syncthing
+    hostname: syncthing #optional
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ="Europe/Berlin"
+    volumes:
+      - "${DOCKER_DATA}/syncthing:/config"
+      - "${MP3MDF_OUTPUT_FOLDER}:/data1"
+    ports:
+      - ${PORT_SYNCTHING}:8384
+      - 22000:22000/tcp
+      - 22000:22000/udp
+      - 21027:21027/udp
 
 networks:
   multimediaaudio:
