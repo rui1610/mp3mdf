@@ -49,7 +49,7 @@ services:
       - TZ="Europe/Berlin"
     volumes:
       - "${DOCKER_DATA}/syncthing:/config"
-      - "${MP3MDF_OUTPUT_FOLDER}:/data1"
+      - "${MP3MDF_OUTPUT_FOLDER}:/music"
     ports:
       - ${PORT_SYNCTHING}:8384
       - 22000:22000/tcp
